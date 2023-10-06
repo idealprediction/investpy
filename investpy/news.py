@@ -244,7 +244,6 @@ def economic_calendar(
 
     id_, last_id = 0, 0
     results = list()
-    # scraper = cfscrape.create_scraper()
     scraper = cloudscraper.create_scraper(
         browser={
             'browser': 'chrome',
