@@ -244,7 +244,13 @@ def economic_calendar(
 
     id_, last_id = 0, 0
     results = list()
-    scraper = cloudscraper.create_scraper(debug=True)
+    scraper = cloudscraper.create_scraper(
+        browser={
+            'browser': 'chrome',
+            'platform': 'android',
+            'desktop': False
+        }
+    )
 
     while True:
         req = scraper.post(url, headers=headers, data=data)
